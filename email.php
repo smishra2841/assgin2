@@ -25,7 +25,7 @@ ini_set('display_errors', 1);
     $count = mysqli_num_rows($query);
    echo"$sql";
     echo"$count";
-    echo"fuck u 2";
+   
     if ($count >= 1)
     {
             while($row = mysqli_fetch_array($query))
@@ -57,7 +57,7 @@ ini_set('display_errors', 1);
                         $queryUsers = mysqli_query($conn,$users) or die(mysqli_error($conn));
                         $userCount = mysqli_num_rows($queryUsers);
 
-                         echo" the user table open";
+                       
                         //$recipients = array();
                             if ($userCount >= 1)
                             {
@@ -75,7 +75,7 @@ ini_set('display_errors', 1);
                                         ]
                                     ]);
 
-                                     echo "We send a fucking email";
+                                     echo "We have sucessfully send an email";
 
                                 //$subject ='A-CRM; UpComing Activities';
                                 

@@ -22,9 +22,9 @@
     $count = mysqli_num_rows($query);
     echo"$sql";
     echo"$count";
-    echo"fuck u 2";
+  
     if ($count >= 1)
-    {echo"fuck u ";
+    {
             while($row = mysqli_fetch_array($query))
             {
                     $ID = $row["id"];
@@ -43,7 +43,7 @@
                         $users = "SELECT * FROM users WHERE smsconfirm ='1' AND id ='$userId'" ;
                         $queryUsers = mysqli_query($conn,$users) or die(mysqli_error());
                         $userCount = mysqli_num_rows($queryUsers);
-                         echo" the user table open";
+                        
 
                          if ($userCount >= 1)
                             {
