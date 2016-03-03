@@ -40,15 +40,11 @@ ini_set('display_errors', 1);
                     
 
                     
-                    $search_output = "<ul>
-                                <li>
-                                    <h3> Hi your current schedule is:</h3>
-                                    <h4><b>Tiltle:".$schedule_title."</b></h4>
-                                    <p>Date: ".$eventDate."</p>
-                                    <p>Time: ".$evenTime."</p>
-                                    <p>Description: ".$schedule_description."</p>
-                                </li><br/>                  
-                            </ul>";
+                    $search_output = "<h3> Hi your current schedule is:<br/></h3>
+                                    <h4><b>Tiltle:".$schedule_title."</b><br/></h4>
+                                    <p>Date: ".$eventDate."<br/></p>
+                                    <p>Time: ".$evenTime."<br/></p>
+                                    <p>Description: ".$schedule_description."<br/></p>";
 
                             $sendMail = true;
                         }
