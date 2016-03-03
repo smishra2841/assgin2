@@ -1,9 +1,7 @@
 <?php include 'dbconnect.php' ?>
 
 <?php
-ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+
     require 'vendor/autoload.php';
 
     use SparkPost\SparkPost;
@@ -12,7 +10,9 @@ ini_set('display_errors', 1);
 
     $httpAdapter = new Guzzle6HttpAdapter(new Client());
     $sparky = new SparkPost($httpAdapter, ['key'=>getEnv('SPARKPOST_API_KEY')]);
-
+ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
     $date = date("n/j/Y");
     $time = date("H:i");
