@@ -38,7 +38,7 @@
             }
              if($sendSMS)
                     {  
-                        $users = "SELECT * FROM users WHERE emailconfirm ='1' AND id ='ID' " ;
+                        $users = "SELECT * FROM users WHERE smsconfirm ='1' AND id ='$userId'" ;
                         $queryUsers = mysqli_query($conn,$users) or die(mysqli_error());
                         $userCount = mysqli_num_rows($queryUsers);
                          echo" the user table open";
