@@ -42,10 +42,11 @@ ini_set('display_errors', 1);
                     
                     $search_output = "<ul>
                                 <li>
-                                    <h4>Tiltle:".$schedule_title."</h4>
-                                    <p><b>Date: ".$eventDate."</b></p>
-                                    <p><b>Time: ".$evenTime."</b></p>
-                                    <p><b>Description: ".$schedule_description."</p>
+                                    <h3> Hi your current schedule is:</h3>
+                                    <h4><b>Tiltle:".$schedule_title."</b></h4>
+                                    <p>Date: ".$eventDate."</p>
+                                    <p>Time: ".$evenTime."</p>
+                                    <p>Description: ".$schedule_description."</p>
                                 </li><br/>                  
                             </ul>";
 
@@ -68,7 +69,7 @@ ini_set('display_errors', 1);
                                 {
                                     $to =$rowu['email'];
                                     $msg = $search_output; 
-                                    $msgs="<html><body>".$msg."</body></html>";
+                                    $msgs="<html><body>"$msg"</body></html>";
                                      $results = $sparky->transmission->send([
                                         'from'=>'testing@' . getEnv('SPARKPOST_SANDBOX_DOMAIN'),
                                         'html'=>$msgs,
