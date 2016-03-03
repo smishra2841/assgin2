@@ -34,7 +34,7 @@
                     $evenTime = $row["eventTime"];
                     $userId = $row["user_id"];
 
-                    $sms = 'Hi your current scheudle, schedule title: $schedule_title, Schudle description: $schedule_description, event date:$eventDate, event time:$evenTime';
+                    $sms = 'Hi your current scheudle, schedule title:' .$schedule_title.', Schudle description:' .$schedule_description.', event date:'.$eventDate.', event time:'.$evenTime.'.';
 
                      $sendSMS = true;
             }
