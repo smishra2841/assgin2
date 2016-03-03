@@ -5,7 +5,7 @@
    ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    require 'class-clockwork.php';
+    require 'class-Clockwork.php';
     $apikey="8eff80e497eb2b5855fe14419c812d9bba604eed";
     $clockwork = new Clockwork($apikey);
 
