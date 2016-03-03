@@ -69,7 +69,7 @@ ini_set('display_errors', 1);
                                 {
                                     $to =$rowu['email'];
                                     $msg = $search_output; 
-                                    $msgs="<html><body>"$msg"</body></html>";
+                                    $msgs="<html><body>".$msg."</body></html>";
                                      $results = $sparky->transmission->send([
                                         'from'=>'testing@' . getEnv('SPARKPOST_SANDBOX_DOMAIN'),
                                         'html'=>$msgs,
