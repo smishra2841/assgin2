@@ -59,13 +59,15 @@ ini_set('display_errors', 1);
                         $users = "SELECT * FROM users WHERE emailconfirm ='1' AND id ='$userId'" ;
                         $queryUsers = mysqli_query($conn,$users) or die(mysqli_error($conn));
                         $userCount = mysqli_num_rows($queryUsers);
-                         
+
+                         echo" the user table open";
                         //$recipients = array();
                             if ($userCount >= 1)
                             {
                                 while($rowu = mysqli_fetch_array($queryUsers))
                                 {
                                     $to =$rowu['email'];
+                                    $msg = $search_output; 
                                     $msgs="<html><body>".$msg."</body></html>";
                                      $results = $sparky->transmission->send([
                                         'from'=>'testing@' . getEnv('SPARKPOST_SANDBOX_DOMAIN'),
@@ -76,10 +78,10 @@ ini_set('display_errors', 1);
                                         ]
                                     ]);
 
-                                     
+                                     echo "We send a fucking email";
 
                                 //$subject ='A-CRM; UpComing Activities';
-                                //$msg = $search_output; 
+                                
                                 //$to = $rowu['email'];
 
                                 //mail($to, $subject, $msg);
