@@ -51,8 +51,8 @@
                                 {
 
                                      $message = array (
-                                                        'to' => $rowu['phoneno'];
-                                                        'message'=> $sms;
+                                                        'to' => $rowu['phoneno'],
+                                                        'message'=> $sms
 
                                                         );
                                      $done = $clockwork -> send ($message);
