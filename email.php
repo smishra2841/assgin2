@@ -1,6 +1,9 @@
 <?php include 'dbconnect.php' ?>
 
 <?php
+ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     require 'vendor/autoload.php';
 
     use SparkPost\SparkPost;
@@ -15,14 +18,14 @@
     $time = date("H:i");
     $mod_Time = strtotime($time."+ 10 minutes");
     $newTime = date("H:i",$mod_Time);
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL); 
+     
     $sql = "SELECT * FROM event WHERE eventDate='$date' AND eventTime ='$newTime'" ;
     
     $query = mysqli_query($conn,$sql) or die(mysqli_error());
     $count = mysqli_num_rows($query);
-   
+   echo"$sql";
+    echo"$count";
+    echo"fuck u 2";
     if ($count >= 1)
     {
             while($row = mysqli_fetch_array($query))
